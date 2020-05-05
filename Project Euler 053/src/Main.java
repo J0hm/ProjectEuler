@@ -78,9 +78,13 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
+		long start, end;
 		
-		//System.out.println(combination(23, 2));
+		start = System.nanoTime();
 		System.out.println(solve());
+		end = System.nanoTime();
+		
+		System.out.println((double)(end-start)/1000000 + "ms");
 
 	}
 
