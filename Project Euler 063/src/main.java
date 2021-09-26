@@ -1,29 +1,20 @@
 public class main {
-    
-    // getDigits : long n --> long digits
-    // returns the number of digits in n
-    public static int getDigits(double n){
-        int digits = 0;
-        
-        if(n==0) return 1;
 
-        while(n > 0){
-            n/=10;
-            digits++;
+    public static void solve(){
+        int result = 0;
+        int lower = 0;
+        int n = 1;
+ 
+        while (lower < 10) {
+            lower = (int)Math.ceil(Math.pow(10, (n-1.0)/n));
+            result += 10 - lower;
+                n++;
         }
 
-        return digits;
-    }
-
-    public static boolean isNDigitPower(long n){
-        double base = Math.pow(Math.E, (Math.log(n)/getDigits(n)));
-        System.out.println (base + "^" + getDigits(n) + "=" + Math.pow(base, getDigits(n)));
-
-        if((int) base == base) return true;
-        return false; 
+        System.out.println(result);
     }
 
     public static void main(String[] args) {
-        System.out.println(isNDigitPower(16807));
+        solve();
     }
 }
