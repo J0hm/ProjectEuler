@@ -7,3 +7,4 @@
 * Problem 18: Non-functioning, fix algorithm
 * Problem 40: Errors in algorithm, produces correct results but throws errors
 * Problem 44: Optimize algorithm 
+* Problem 206: Unfinished and accidentally added, should be completed soon
